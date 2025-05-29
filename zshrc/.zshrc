@@ -127,7 +127,7 @@ safe_source "${HOME}/.iterm2_shell_integration.zsh"
 eval "$(zoxide init zsh)"
 
 # VI Mode!!!
-bindkey jj vi-cmd-mode
+bindkey '^[' vi-cmd-mode
 
 alias la=tree
 alias cat=bat
