@@ -124,3 +124,4 @@ safe_source "${HOME}/.iterm2_shell_integration.zsh"
 # fi
 # unset __mamba_setup
 # # <<< mamba 초기화 <<<
+eval "$(zoxide init zsh)"
