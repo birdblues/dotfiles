@@ -125,3 +125,14 @@ safe_source "${HOME}/.iterm2_shell_integration.zsh"
 # unset __mamba_setup
 # # <<< mamba 초기화 <<<
 eval "$(zoxide init zsh)"
+
+# VI Mode!!!
+bindkey jj vi-cmd-mode
+
+alias la=tree
+alias cat=bat
+
+# Eza
+alias l="eza -l --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias ltree="eza --tree --level=2  --icons --git"
