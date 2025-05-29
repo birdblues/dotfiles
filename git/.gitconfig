@@ -1,0 +1,144 @@
+[user]
+
+name = dhseo
+
+email = birdblues@mac.com
+
+[color]
+
+ui = auto
+
+[core]
+
+editor = vim
+
+autocrlf = input
+
+	excludesfile = /Users/birdblues/.gitignore
+
+whitespace=cr-at-eol
+	quotepath = false
+
+[i18n]
+
+commitEncoding = utf-8
+
+	logoutputencoding = utf-8
+
+[diff]
+
+tool = vimdiff
+
+[difftool]
+
+prompt = true
+
+[merge]
+
+tool = vimdiff
+
+[mergetool]
+
+prompt = false
+
+[help]
+
+autocorrect = 1
+
+[alias]
+
+ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+
+ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+
+lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+
+lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+dl = "!git ll -1"
+
+dlc = diff --cached HEAD^
+
+graph1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+graph2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
+lp = log --first-parent --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --date=short
+
+graph = !"git graph1"
+
+co = checkout
+
+br = branch
+
+ci = commit
+
+st = status
+
+lg = !"git graph1"
+
+unstage = reset HEAD --
+
+last = log -1 HEAD
+
+sl = stash list
+
+sa = stash apply
+
+ss = stash save
+
+r = reset
+
+r1 = reset HEAD^
+
+r2 = reset HEAD^^
+
+rh = reset --hard
+
+rh1 = reset HEAD^ --hard
+
+rh2 = reset HEAD^^ --hard
+
+cp = cherry-pick
+
+st = status -s
+
+cl = clone
+
+diff = diff --word-diff
+
+dc = diff --cached
+
+lasttag = describe --tags --abbrev=0
+
+lt = describe --tags --abbrev=0
+
+la = "!git config -l | grep alias | cut -c 7-"
+
+gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+
+grep = grep -Ii
+
+gr = grep -Ii
+
+f = "!git ls-files | grep -i"
+
+dr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+lc  = "!f() { git ll "$1"^.."$1"; }; f"
+
+diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+
+
+
+[difftool "sourcetree"]
+
+cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+
+path = 
+
+[mergetool "sourcetree"]
+
+cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+
+trustExitCode = true
