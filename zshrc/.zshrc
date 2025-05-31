@@ -136,3 +136,10 @@ alias cat=bat
 alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias ltree="eza --tree --level=2  --icons --git"
+
+# Lua 5.1 환경 자동 활성화
+if [ -f "$HOME/lazy-rocks/bin/activate" ]; then
+  source "$HOME/lazy-rocks/bin/activate"
+fi
+
+eval "$(rbenv init - zsh)"  # zsh 사용 시
