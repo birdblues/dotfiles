@@ -50,4 +50,7 @@ require("lazy").setup({
       },
     },
   },
+  rocks = {
+    path = "~/lazy-rocks",
+  },
 })

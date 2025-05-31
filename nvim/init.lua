@@ -9,5 +9,5 @@ end
 
 -- Neovim spell check 비활성화
 vim.opt.spell = false
-vim.opt.spelllang = ""
-
+vim.g.python3_host_prog = vim.fn.expand("~/.venvs/nvim/bin/python")
+vim.g.loaded_perl_provider = 0
