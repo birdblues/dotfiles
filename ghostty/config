@@ -1,0 +1,15 @@
+# 메인 폰트 (영문/기호)
+font-family = "JetBrains Mono"
+
+# 폴백 폰트들 (한글/중문/일문 등)
+font-family-fallback = "D2Coding", "Noto Sans CJK KR", "Malgun Gothic"
+
+font-size = 19
+theme = catppuccin-mocha
+background-blur-radius = 20
+mouse-hide-while-typing = true
+window-decoration = true
+# keybind = global:cmd+/=toggle_quick_terminal
+macos-option-as-alt = true
+background-opacity = 0.7
+# background-blur-radius = 20 
