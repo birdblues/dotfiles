@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.opt.spell = false
+vim.opt_local.spell = false
