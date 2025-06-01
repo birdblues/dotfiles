@@ -3,8 +3,9 @@
 # Safari
 # ctrl+alt+shift - a : open -a "/Applications/Safari.app/Contents/MacOS/Safari"
 
-ctrl + alt + shift - s : open -a "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-ctrl + alt + shift - u : open -a "/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
-ctrl + alt + shift - p : open -a "/Applications/iTerm.app/Contents/MacOS/iTerm2"
+ctrl + alt + shift - p : open -a "wezterm"
 ctrl + alt + shift - o : open -a "/Applications/Obsidian.app/Contents/MacOS/Obsidian"
+ctrl + alt + shift - i : open -a "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+ctrl + alt + shift - u : open -a "/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
+# ctrl + alt + shift - p : open -a "/Applications/iTerm.app/Contents/MacOS/iTerm2"
 # ctrl + alt + shift - g : open -a "/Applications/Ghostty.app"
