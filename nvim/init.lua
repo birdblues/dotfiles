@@ -1,13 +1,10 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-
+-- -- bootstrap lazy.nvim, LazyVim and your plugins
 if vim.g.vscode then
-  -- VSCode extension
+  print("Neovim is running in VSCode")
 else
-  -- ordinary Neovim
+  print("Neovim is running in terminal")
   require("config.lazy")
+  require("plugins.colorscheme")
 end
 
--- Neovim spell check 비활성화
-vim.opt.spell = false
 vim.g.python3_host_prog = vim.fn.expand("~/.venvs/nvim/bin/python")
-vim.g.loaded_perl_provider = 0
