@@ -1,10 +1,7 @@
 # 메인 폰트 (영문/기호)
 font-family = "JetBrains Mono"
 
-# 폴백 폰트들 (한글/중문/일문 등)
-font-family-fallback = "D2Coding", "Noto Sans CJK KR", "Malgun Gothic"
-
-font-size = 19
+font-size = 17
 theme = catppuccin-mocha
 background-blur-radius = 20
 mouse-hide-while-typing = true
