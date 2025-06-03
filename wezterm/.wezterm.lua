@@ -4,9 +4,7 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- config.set_environment_variables = {
--- 	TERM = "xterm-256color", -- 또는 wezterm
--- }
+config.term = "xterm-kitty"
 
 config.initial_cols = 120
 config.initial_rows = 28
@@ -29,6 +27,8 @@ config.font = wezterm.font_with_fallback({
 -- config.color_scheme = "Raycast_Dark"
 config.color_scheme = "Tokyo Night Moon"
 config.font_size = 16
+config.enable_kitty_graphics = true
+config.max_fps = 120
 
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
