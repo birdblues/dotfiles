@@ -11,7 +11,7 @@ config.initial_rows = 28
 
 config.font = wezterm.font_with_fallback({
 	{
-		family = "JetBrainsMono Nerd Font Propo",
+		family = "JetBrains Mono",
 		weight = "ExtraLight",
 		harfbuzz_features = {
 			"ss01=1",
@@ -22,11 +22,9 @@ config.font = wezterm.font_with_fallback({
 	{ family = "Apple Color Emoji" },
 })
 
--- config.color_scheme = "Catppuccin Mocha"
--- config.color_scheme = "AdventureTime"
--- config.color_scheme = "Raycast_Dark"
 config.color_scheme = "Tokyo Night Moon"
 config.font_size = 16
+config.line_height = 1.10
 config.enable_kitty_graphics = true
 config.max_fps = 120
 
@@ -36,6 +34,7 @@ config.enable_scroll_bar = false
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 20
+config.window_close_confirmation = "NeverPrompt"
 
 config.leader = { key = "F", mods = "CTRL|SHIFT|ALT", timeout_milliseconds = 1500 }
 config.keys = {
