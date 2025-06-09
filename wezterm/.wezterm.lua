@@ -4,7 +4,7 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-config.term = "xterm-kitty"
+config.term = "wezterm"
 
 config.initial_cols = 120
 config.initial_rows = 28
@@ -21,6 +21,34 @@ config.font = wezterm.font_with_fallback({
 	{ family = "Pretendard GOV", weight = "Light" },
 	{ family = "Apple Color Emoji" },
 })
+
+config.font_rules = {
+	-- Bold만
+	{
+		intensity = "Bold",
+		font = wezterm.font_with_fallback({
+			{ family = "JetBrains Mono", weight = "Bold" },
+			{ family = "Pretendard GOV", weight = "Bold" },
+		}),
+	},
+	-- Italic만
+	{
+		italic = true,
+		font = wezterm.font_with_fallback({
+			{ family = "JetBrains Mono", style = "Italic" },
+			{ family = "Pretendard GOV", style = "Italic" },
+		}),
+	},
+	-- Bold + Italic
+	{
+		intensity = "Bold",
+		italic = true,
+		font = wezterm.font_with_fallback({
+			{ family = "JetBrains Mono", weight = "Bold", style = "Italic" },
+			{ family = "Pretendard GOV", weight = "Bold", style = "Italic" },
+		}),
+	},
+}
 
 config.color_scheme = "Tokyo Night Moon"
 config.font_size = 16

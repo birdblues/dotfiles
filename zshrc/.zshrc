@@ -29,7 +29,33 @@ install_xterm_kitty_terminfo() {
     rm "$tempfile"
   fi
 }
+
+install_xterm_wezterm_terminfo() {
+  # Attempt to get terminfo for xterm-wezterm
+  if ! infocmp wezterm &>/dev/null; then
+    echo "wezterm terminfo not found. Installing..."
+    # Create a temp file
+    tempfile=$(mktemp)
+    # Download the wezterm.terminfo file
+    # https://github.com/wez/wezterm/blob/main/termwiz/data/wezterm.terminfo
+    if curl -o "$tempfile" https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo; then
+      echo "Downloaded wezterm.terminfo successfully."
+      # Compile and install the terminfo entry for my current user
+      if tic -x -o ~/.terminfo "$tempfile"; then
+        echo "wezterm terminfo installed successfully."
+      else
+        echo "Failed to compile and install wezterm terminfo."
+      fi
+    else
+      echo "Failed to download wezterm.terminfo."
+    fi
+    # Remove the temporary file
+    rm "$tempfile"
+  fi
+}
+
 install_xterm_kitty_terminfo
+install_xterm_wezterm_terminfo
 
 # ===== 유틸리티 함수 =====
 # 안전한 소스 로딩 함수
@@ -171,3 +197,4 @@ eval "$(rbenv init - zsh)"  # zsh 사용 시
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH=$PATH:$(npm config get prefix)/bin
