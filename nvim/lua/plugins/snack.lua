@@ -1,6 +1,6 @@
 return {
   {
-    "JellyApple102/snacks.nvim",
+    "folke/snacks.nvim",
     opts = {
       image = {
         enabled = true,
