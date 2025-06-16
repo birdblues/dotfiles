@@ -148,6 +148,9 @@ alt-4 = 'workspace 4'
 alt-b = 'workspace B'
 alt-t = 'workspace T'
 alt-c = 'workspace C'
+alt-o = 'workspace O'
+alt-a = 'workspace A'
+alt-s = 'workspace S'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -157,6 +160,9 @@ alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-t = 'move-node-to-workspace T'
 alt-shift-c = 'move-node-to-workspace C'
+alt-shift-o = 'move-node-to-workspace O'
+alt-shift-a = 'move-node-to-workspace A'
+alt-shift-s = 'move-node-to-workspace S'
 
 alt-z = 'fullscreen'
 alt-f = 'layout floating tiling'
@@ -209,10 +215,33 @@ if.app-id = 'com.google.Chrome'
 run = "move-node-to-workspace B"
 
 [[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = "move-node-to-workspace B"
+if.app-id = 'com.microsoft.VSCode'
+run = "move-node-to-workspace C"
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = "move-node-to-workspace O"
+
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+run = "move-node-to-workspace A"
+
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
+run = "move-node-to-workspace A"
+
+[[on-window-detected]]
+if.app-id = 'ai.perplexity.mac'
+run = "move-node-to-workspace A"
+
+[[on-window-detected]]
+if.app-id = 'com.tradingview.tradingviewapp.desktop'
+run = "move-node-to-workspace S"
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = "layout floating"
 
+[[on-window-detected]]
+if.app-id = 'com.apple.FontBook'
+run = "layout floating"
